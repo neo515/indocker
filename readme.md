@@ -18,7 +18,7 @@ redis    |etc/redis/redis.conf    | data/redis/redis-${port}      |data/redis/re
 每个容器对应数据目录： /data/yunwei/data/mongodb/mongodb-${port}  
 日志：              /data/yunwei/data/mongodb/mongodb-${port}/mongodb.log  
 
-```bash
+```shell
 # 建立mongodb
 port=27017
 
