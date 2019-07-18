@@ -1,0 +1,102 @@
+[mysqld]
+character-set-server=utf8
+# set to 30 days 60x60x24x30x1000
+skip-name-resolve
+interactive_timeout=864000000
+wait_timeout=864000000
+#set-variable=max_connections=2000
+server-id=1000
+general_log = 0
+#skip-grant-tables
+max_allowed_packet = 128M
+innodb_data_file_path = ibdata1:128M:autoextend:max:4096M
+
+log-bin=mysql-bin
+log-slave-updates=true
+relay-log=relay-log-bin
+#innodb_log_file_size=48M
+#innodb_force_recovery=6
+
+binlog-format=ROW
+
+query_cache_size=128M
+tmp_table_size=128M
+key_buffer_size=64m
+#performance_schema_max_table_instances=800
+table_definition_cache=400
+table_open_cache=256
+
+
+back_log = 50
+binlog_cache_size = 1M
+bulk_insert_buffer_size = 64M
+#ft_min_word_len = 4
+innodb_additional_mem_pool_size = 16M
+innodb_buffer_pool_size = 2G
+innodb_data_file_path = ibdata1:10M:autoextend
+innodb_file_io_threads = 4
+innodb_flush_log_at_trx_commit = 1
+innodb_lock_wait_timeout = 120
+innodb_log_buffer_size = 8M
+innodb_log_file_size = 256M
+innodb_log_files_in_group = 3
+innodb_max_dirty_pages_pct = 90
+innodb_thread_concurrency = 16
+interactive_timeout=86400000
+join_buffer_size = 8M
+key_buffer_size=256m
+log-slave-updates=true
+long_query_time = 2
+max_allowed_packet = 128M
+max_connect_errors = 10
+max_connections=150
+#max_connections=10000
+max_heap_table_size = 64M
+#performance_schema_max_table_instances=800
+query_cache_limit = 16M
+query_cache_size=256M
+read_buffer_size = 2M
+read_rnd_buffer_size = 16M
+slow_query_log
+sort_buffer_size = 8M
+table_open_cache = 2048
+thread_cache_size = 8
+thread_concurrency = 8
+thread_stack = 192K
+tmp_table_size=256M
+transaction_isolation = REPEATABLE-READ
+wait_timeout=86400000
+
+performance_schema=off
+performance-schema-instrument='memory/%=COUNTED'
+performance_schema_digests_size=10000
+performance_schema_events_statements_history_long_size=3000
+performance_schema_events_stages_history_long_size=3000
+performance_schema_events_waits_history_long_size=3000
+performance_schema_events_statements_history_size=10
+performance_schema_max_digest_length=1024
+performance_schema_max_cond_instances=5000
+performance_schema_max_file_instances=5000
+performance_schema_max_mutex_instances=5000
+
+
+replicate-ignore-db=mysql
+replicate-ignore-db=performance_schema
+replicate-ignore-db=information_schema
+replicate-ignore-db=test
+
+binlog-ignore-db = mysql
+binlog-ignore-db =performance_schema
+binlog-ignore-db =information_schema
+binlog-ignore-db =test
+
+report_host = 192.168.9.227
+report_user = slave
+
+
+[client]
+default_character_set=latin1
+
+#[mysqld_safe]
+#log-error=/var/log/mysqld.log
+#pid-file=/var/run/mysqld/mysqld.pid
