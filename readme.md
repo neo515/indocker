@@ -9,6 +9,8 @@ ssdb     |etc/ssdb/prod.conf      | data/ssdb/var-${port}         |data/ssdb/var
 memcached|etc/ssdb/prod.conf      |                               | 
 mysql    |etc/mysql/my.cnf        | data/mysql${port}             |data/mysql${port}/mysql${port}.log
 redis    |etc/redis/redis.conf    | data/redis/redis-${port}      |data/redis/redis-${port}/redis.log
+
+
 `ps：相对于/data/yunwei/`
 
 #### 1.mongodb
