@@ -29,9 +29,9 @@ EXPOSE 8888
 #VOLUME /ssdb/var
 
 
-ARG     workuser_id
-RUN     adduser -D -u $workuser_id godman && chown -R godman:godman /ssdb
-USER godman
+# ARG     workuser_id
+# RUN     adduser -D -u $workuser_id godman && chown -R godman:godman /ssdb
+# USER godman
 
 ENV LANG=en_US.utf8
 CMD ["/ssdb/ssdb-server", "/ssdb/ssdb.conf"]
