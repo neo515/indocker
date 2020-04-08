@@ -21,6 +21,7 @@ docker run --restart=always \
     -h ${service_name}-${port} \
     -v ${service_data}:/data \
     -v ${service_etc}:/usr/local/etc/redis/ \
+    -l creator=indocker \
     -p $port:6379   -tid  redis:3.0.5 \
     /usr/local/bin/redis-server /usr/local/etc/redis/redis.conf
     # -v /etc/localtime:/etc/localtime \

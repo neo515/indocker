@@ -20,6 +20,7 @@ docker run --restart=always \
     -v ${service_data}:/data/db \
     -v ${service_etc}:/etc/mongo \
     -p ${port}:27017 -tid \
+    -l creator=indocker \
     mongo:3.4.10 --config /etc/mongo/mongod.conf
 
     # -v /etc/localtime:/etc/localtime \

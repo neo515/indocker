@@ -23,5 +23,6 @@ docker run  --restart=always \
     -v ${service_data}:/ssdb/var  \
     -v ${service_etc}/ssdb.conf:/ssdb/ssdb.conf \
     -p ${port}:8888 -tid \
+    -l creator=indocker \
     ssdb:1.9.2
     # -v /etc/localtime:/etc/localtime \

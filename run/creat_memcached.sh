@@ -7,5 +7,6 @@ docker run --restart=always  \
     --name memcached-${port} \
     -h     memcached-${port} \
     -p ${port}:11211 -tid  \
+    -l creator=indocker \
     memcached:1.4.24 memcached -m 512
     # -v /etc/localtime:/etc/localtime \

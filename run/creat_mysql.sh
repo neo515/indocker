@@ -24,5 +24,6 @@ docker run  --restart=always \
     -v ${service_etc}:/etc/mysql/conf.d  \
     -e MYSQL_ROOT_PASSWORD=root \
     -p ${port}:3306 \
+    -l creator=indocker \
     -tid mysql:5.6.39
     # -v /etc/localtime:/etc/localtime \

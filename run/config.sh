@@ -1,11 +1,10 @@
 #!/bin/bash
 
 
-svc_path=/Volumes/Data/service
+svc_path=/Volumes/Data/service    #修改成你准备放置数据库服务的根目录,如/data/services/
+
+###################################################
 
 project_path=$(dirname $(cd `dirname $0`;pwd))
 
 cfg_tmpl_path=${project_path}/conf_tmpl
-# data_path=$main_path/data
-
-# echo "$main_path $etc_path $data_path"
