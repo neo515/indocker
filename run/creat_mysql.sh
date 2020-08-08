@@ -25,12 +25,12 @@ docker run  --restart=always \
     --memory 4G \
     -v ${service_data}:/var/lib/mysql \
     -v ${service_etc}:/etc/mysql \
-    -v /etc/localtime:/etc/localtime  \
     -e MYSQL_ROOT_PASSWORD=root \
     -p ${port}:3306 \
     -l creator=indocker \
     -tid mysql:5.6.39
 
+    # -v /etc/localtime:/etc/localtime  \  #mac上dockerd服务需要开启目录权限才能映射,所以mac取消映射localtime
     # -v ${service_etc}/my.cnf:/etc/mysql/my.cnf \
     # -v ${service_etc}/conf.d/:/etc/mysql/conf.d \
 
