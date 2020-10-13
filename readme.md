@@ -22,7 +22,7 @@ mongodb:   1个
 #### 让我们开始
 1. 当然,找个目录clone下来吧.
 ```
-git clone https://github.com/jiafeicat/indocker.git
+git clone https://github.com/neo515/indocker.git
 ```
 
 2. 简单配置下就可以正常用啦
